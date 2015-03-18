@@ -1,0 +1,12 @@
+{% extends '@Application/layout.twig' %}
+
+
+{% block body_class %}pyz-page{% endblock %}
+
+
+{% block title_content %}Glossary{% endblock %}
+
+
+{% block content %}
+    {% include '@Glossary/Grid/glossary-keys-grid.twig' %}
+{% endblock %}

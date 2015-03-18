@@ -1,0 +1,59 @@
+Spryker Software – Glossary, March 2015
+
+Terms and Conditions of Use of the “Glossary” Source Code Module of the Spryker Software
+
+Spryker Systems GmbH, Julie-Wolfthorn-Straße 1, 10115 Berlin (“Spryker”) releases the “Glossary” source code module of the Spryker Software subject to the following Terms of Use. The User of this source code module acknowledges the applicability and validity of these terms and confirms that they have read, understood and agreed to be bound by them. The User also agrees that no additional agreements exist between Spryker and the User.
+
+In addition, the provisions of the GitHub, Inc. Terms of Use (https://help.github.com/articles/github-terms-of-service/) also apply.
+
+Should the User not be using the “Glossary” source code module in their own capacity as a “Consumer” in accordance with § 13 German Civil Code (Bürgerlichen Gesetzbuches – BGB), but as an “Entrepreneur” in accordance with § 14 BGB, for or under contract of a company or other legal person, this party shall confirm, using the GitHub Repository, that they are an authorised representative of that company or other legal person.
+
+Preamble
+
+Spryker is a technology provider who, under these Terms of Use, is making the source code module for a “Glossary” that is part of the Spryker Software available for viewing (in the form of a “read permission” using a GitHub Repository from GitHub Inc.) or by use of a “Download ZIP File”. These Terms of Use permit the User to retrieve a copy of the source code via a link displayed in the aforementioned GitHub Repository and to create a copy of the source code on the User’s own operating system for the User’s own inspection of the source code. Agreeing to these Terms of Use grants a License, solely for the aforementioned, to the User indefinitely, subject to revocation at any time for good cause. 
+	•	Content of the “Glossary” Source Code Module
+Subject of the License is the “Glossary” source code module of the Spryker Software. The “Glossary” is what is known as a bundle that manages the translation key and the associated translations (in their various localisations). It includes the following components: 
+	•	classes to interact with the database (Persistence layer, kernel level) 
+	•	classes with administration logic and communication with the persistence layer (business layer, kernel level) 
+	•	classes with table (grid) presentation of the Glossary in the Zed backend (presentation layer, kernel)
+	•	classes to link the presentation layer with the business layer (communication layer, kernel level)
+	•	classes for the installation of demo data (business and persistence layer, project level)
+In addition, the “Glossary” also contains two further core bundles (labelled as “Touch” and “Locale”) on which the “Glossary” itself depends. The directory structure of the “Glossary” is identical to that of the Spryker Software, thus forming a copy of the original source code modules that Spryker Software contains. Spryker is the sole owner of all intellectual property rights to the “Glossary”, particularly with regard to the ownership of copyright, the rights of utilisation and exploitation, and rights to the database. 
+
+License
+
+In accordance with Paragraph 2, Spryker grants a non-exclusive License for an indefinite time period to the User for the “Glossary” source code module for the purposes of inspection (in the form of a read permission). For the inspection, the User may create a “Clone”, via use of the GitHub Repository that downloads the source code module via the git clone button from GitHub directly or in the form of a ZIP file to the User’s own operating system. The purpose for creating this “Clone” of the “Glossary” source code module is exclusively limited to the inspection of the source code components themselves, and thus the “reading” of the source code. The granted relates to the source code module current at the time it is released via the GitHub Repository link. Spryker reserves the right to revoke the License at any time should any indication exist that the User has violated these Terms of Use or for any other good cause. Use of the “Glossary” source code module is exclusively limited to the User’s own viewing via the GitHub Repository, or for inspection where a “Clone” of the same has been created on the User’s operating system, or after download in ZIP file format. Any right to further use for any purpose whatsoever, particularly for modification, editing, linking to other software code components, distribution, leasing and/ or sub-licensing and/ or disclosure to associated companies or third parties is expressly prohibited. In addition, the creation of the User’s own modifications/ adaptations and Add-Ons in connection with the “Glossary” source code module, or the use of such modifications/ adaptations and Add-Ons in connection with other source code modules, or the production operation or any act in preparation for productive operation by the User is not permitted.
+
+Specific Obligations and Restrictions
+
+    The User of the “Glossary” source code module is not authorised to:
+		•	Process or otherwise use the source code components individually or as a whole as a directory with other software, plug-ins or extensions.
+		•	Change, remove, or use contrary to their purpose in any way, any copyright notices or other proprietary notices that appear on or in the source code
+		•	Modify, adapt, translate or create derivative components or other modules based on the source code components.
+		•	Reverse engineer or otherwise attempt to map out the source code to reproduce the directory.
+
+Transfer Rights
+
+The User may not lease, rent, loan, sell, sub-license, transfer or assign any rights to the “Glossary” source code module, or to permit that copy the “Glossary” source code module in whole or in part onto any technical device of another user. The User may however transfer this License to inspect to another natural or legal person on the condition that the recipient, as “User” agrees to and observes the Terms of Use governing that right of inspection. 
+
+Intellectual Property Rights, Rights Reserved
+
+The “Glossary” source code module and all authorised copies made by the User remain the intellectual property of Spryker. This also applies to the structure, the construction and the source code. The “Glossary” source code module is subject to copyright and the rights protecting databases, including the intellectual property laws of the Federal Republic of Germany and the European Union. Unless expressly otherwise provided in these Terms of Use or under the relevant laws, Spryker does not grant the User any license to the “Glossary” source code module, and reserves all rights not explicitly granted. 
+
+Warranty Exemption
+
+The “Glossary” source code module shall be made accessible in its current version. Spryker does not guarantee the performance of the source code module or its inspection. Spryker grants no warranties, assurances, specifications or conditions (express or implied, derived from a business relationship or trade custom whether by statute, common law, custom or usage) with regard to defects of title, creation of copies, satisfactory quality or usability for specific purposes, except as such warranties, assurances, specifications or conditions are compulsory according to the applicable law and cannot be restricted. The specifications in this paragraph continue apply after the termination of this Terms of Use, regardless of the reason for such termination. This does not imply any right to use to the “Glossary” source code module after such cessation of use under these Terms of Use.
+
+Limitation of Liability
+
+Spryker accepts no liability for damages, claims or costs of any kind including resulting from lost profits or losses arising in conjunction with the inspection of the “Glossary” source code module, in the creation of a “Clone” on the User’s operating system or when downloading the ZIP file for the purpose of inspection by the User. This includes indirect and incidental damages. The foregoing limitations and exclusions apply as a whole and to the full extent permitted by law. The provisions of the German Civil Code (BGB) also apply.
+
+Reservation of Right of Modification
+
+Spryker reserves the right to modify these Terms of Use. The modifications shall be made available online on Spryker’s website (www.spryker.com). Where no objection is made to the modifications within two weeks of announcement, the modifications shall be deemed as accepted and agreed. Spryker also reserves the right to transfer the rights and duties contained within these Terms of Use in whole or in part to third parties. User acceptance of this transfer to a third party is not required, unless it would be unreasonable for the User in a specific case. 
+
+General Provisions
+
+These Terms of Use are subject to the laws of the Federal Republic of Germany. The jurisdiction for all services provided under this Terms of Use is Berlin. 
+
+Spryker Terms and Conditions of Use, Version 1, March 2015

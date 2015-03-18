@@ -1,0 +1,79 @@
+<section
+    class="spy-layout compact"
+    spy-app="spyFormat, spyGrid, spyForm, spyLayout"
+    ng-controller="GridController"
+    ng-strict-di
+    src="/glossary/grid/translation"
+    name="grid"
+    on="{ form_success : 'update' }"
+    ng-class="{ query : queryActive }"
+>
+    <div spy-grid-pages="pages" labels="{ items : 'Show items %n', pages : 'Page %n of %m' }"></div>
+
+    <table class="spy-grid spy-interactive">
+        <thead>
+            <tr>
+                <th spy-grid-head="columns['glossary_key']" label="Glossary Key"></th>
+                <th spy-grid-head="columns['locale']" label="Locale"></th>
+                <th spy-grid-head="columns['translation']" label="Localized"></th>
+                <th spy-grid-head="columns['translation_is_active']" label="Active"></th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr ng-repeat="row in rows" ng-click="context.entity = { id_glossary_translation : row['id_glossary_translation'] }">
+                <td>{[{ row['glossary_key'] }]}</td>
+                <td>{[{ row['locale'] }]}</td>
+                <td>{[{ row['translation'] }]}</td>
+                <td><spy-format-boolean content="row['translation_is_active']"></spy-format-boolean></td>
+            </tr>
+            <tr ng-if="!rows.length">
+                <td colspan="4">No results found</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div spy-grid-pages="pages" labels="{ items : 'Show items %n', pages : 'Page %n of %m' }"></div>
+
+    <form
+        class="spy-form spy-layout controls"
+        ng-controller="FormController"
+        src="/glossary/form/translation"
+        context="null"
+    >
+        <h3>Add Translation</h3>
+
+        <div spy-input-text-select="field.fk_glossary_key" options="{ label : 'Key' }"></div>
+
+        <button class="button default" type="submit" ng-disabled="query || !field.fk_glossary_key.value" ng-click="context.entity = { fk_glossary_key : model.fields.fk_glossary_key.value }">Add</button>
+    </form>
+
+    <div
+        class="spy-layer"
+        spy-layer="context.entity"
+        on="{ form_success : 'close', form_fail : 'close' }"
+    >
+        <form
+            class="spy-form"
+            ng-if="context.entity"
+            ng-controller="FormController"
+            src="/glossary/form/translation"
+            context="entity"
+        >
+            <h3>Edit Translation</h3>
+
+            <fieldset class="spy-layout controls">
+                <div spy-input-select="field.fk_glossary_key" options="{ label : 'Key', disabled : false, reload : true }"></div>
+                <div spy-input-select="field.fk_locale" options="{ label : 'Locale', disabled : false, reload : true }"></div>
+                <div spy-input-switch="field.is_active" options="{ label : 'Active' }"></div>
+            </fieldset>
+
+            <div spy-input-area="field.value" options="{ label : 'Localization', optional:'optional' }"></div>
+
+            <fieldset class="spy-layout controls">
+                <button class="button default" type="submit" ng-disabled="query" ng-click="update()">Update</button>
+                <button class="button cancel" type="button" ng-disabled="query" ng-click="abort()">Cancel</button>
+            </fieldset>
+        </form>
+    </div>
+</section>
