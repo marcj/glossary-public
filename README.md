@@ -1,6 +1,6 @@
 ## Welcome to Spryker Glossary Bundle
 
-[Spryker](http://spryker.com) is an E-commerce framework. As the name framework suggests, it includes everything to build modern E-commerce sites. It's designed from the ground up to easily extend or exchange parts of the framework in order to adapt to the projects requirements. Another concept is the separation of frontend and backend. The frontend, called Yves, is fast and lightweight. The backend, called Zed, contains all business logic. This is why you will see folders like [SprykerCore/Zed](vendor/spryker/zed-package/SprykerCore/Zed) in this repository.
+[Spryker](http://spryker.com) is an E-commerce framework. As the name framework suggests, it includes everything to build modern E-commerce sites. It's designed from the ground up to easily extend or exchange parts of the framework in order to adapt to the projects requirements. Another concept is the separation of frontend and backend. The frontend, called Yves, is fast and lightweight. The backend, called Zed, contains all business logic. This is why you will see folders like [SprykerFeature/Zed](vendor/spryker/zed-package/src/SprykerFeature/Zed) in this repository.
 
 ### Spryker Framework Code
 Spryker is divided into functional units called bundles. For example there is a product-bundle, discount-bundle and glossary-bundle. The glossary-bundle, you are currently looking at, deals with storing localized strings. This functionality can be used by other bundles e.g. the cms-bundle.
