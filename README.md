@@ -19,7 +19,7 @@ Each bundle consists of up to 4 layers.
 * The [Persistence Layer](vendor/spryker/zed-package/src/SprykerFeature/Zed/Glossary/Persistence) contains access to storage and queries that retrieve data. We use [Propel](http://propelorm.org) as an object-relational mapper.
 
 #### Dependency Injection
-To avoid coupling between the communication, business and persistence layer, every layer has its dependency container. In order to access another layer, e.g. the business layer wants to retrieve queries from the persistence layer, you have to go through the dependency container. Also, within a layer, every object is created by a factory inside the dependency container. This way you can even replace parts within a layer.
+To avoid coupling between the communication, business and persistence layer, every layer has its [dependency container](vendor/spryker/zed-package/src/SprykerFeature/Zed/Glossary/Communication/GlossaryDependencyContainer.php). In order to access another layer, e.g. the business layer wants to retrieve queries from the persistence layer, you have to go through the dependency container. Also, within a layer, every object is created by a factory inside the dependency container. This way you can even replace parts within a layer.
 
 External dependencies to other bundles are implemented via interfaces inside the [Dependency Folder](vendor/spryker/zed-package/src/SprykerFeature/Zed/Glossary/Dependency). So you can see on which other bundles the glossary-bundle depends.
 
