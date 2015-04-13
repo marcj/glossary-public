@@ -42,7 +42,6 @@ class LocaleFacade extends AbstractFacade
      */
     public function getCurrentLocale()
     {
-        //TODO rethink this
         return \ProjectA_Shared_Library_Store::getInstance()->getCurrentLocale();
     }
 
@@ -51,8 +50,6 @@ class LocaleFacade extends AbstractFacade
      */
     public function getRelevantLocales()
     {
-        //TODO retrieve this
-        //just some different locales
         return ['de_DE', 'en_US', 'fr_FR', 'de_CH', 'fr_CH'];
     }
 
