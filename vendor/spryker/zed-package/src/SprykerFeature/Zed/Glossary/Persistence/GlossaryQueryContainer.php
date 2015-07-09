@@ -198,17 +198,13 @@ class GlossaryQueryContainer extends AbstractQueryContainer implements GlossaryQ
      * @param GlossaryKeyQuery $keyQuery
      * @param array $relevantLocales
      *
-     * @return ModelCriteria
+     * @return GlossaryKeyQuery
      * @throws PropelException
      */
     protected function joinKeyQueryWithRelevantLocalesAndTranslations(GlossaryKeyQuery $keyQuery, array $relevantLocales)
     {
         $keyLocaleCrossJoin = new ModelJoin();
         $keyLocaleCrossJoin->setJoinType(Criteria::JOIN);
-
-        $quotedLocales = array_map(function ($value) {
-            return "'$value'";
-        }, $relevantLocales);
 
         $keyLocaleCrossJoin
             ->setTableMap(new TableMap())
@@ -230,7 +226,7 @@ class GlossaryQueryContainer extends AbstractQueryContainer implements GlossaryQ
             ->addJoinObject($keyLocaleCrossJoin, 'pac_locale')
             ->addJoinObject($translationLeftJoin, 'pac_glossary_translation')
             ->addJoinCondition('pac_glossary_translation', 'pac_locale.id_locale = pac_glossary_translation.fk_locale')
-            ->addJoinCondition('pac_locale', 'pac_locale.locale_name  IN ('  . implode($quotedLocales, ', ') . ')');
+            ->addJoinCondition('pac_locale', 'pac_locale.locale_name IN ?', $relevantLocales);
     }
 
     /**
